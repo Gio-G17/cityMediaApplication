@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voiceofgospel/theme/images.dart';
-import 'package:voiceofgospel/theme/strings.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/widgets/about_sized_box.dart';
-import 'package:voiceofgospel/features/widgets/body_text.dart';
-import 'package:voiceofgospel/main.dart';
+import 'package:cityMedia/theme/images.dart';
+import 'package:cityMedia/theme/strings.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/widgets/about_sized_box.dart';
+import 'package:cityMedia/features/widgets/body_text.dart';
+import 'package:cityMedia/main.dart';
 
 class DialogPage extends StatelessWidget {
   const DialogPage({super.key});

@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/screens/home/home_screen.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_background_container.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_header.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_mid_container.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_shade_container.dart';
-import 'package:voiceofgospel/features/widgets/my_drawer_safe_area.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/screens/home/home_screen.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_background_container.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_header.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_mid_container.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_shade_container.dart';
+import 'package:cityMedia/features/widgets/my_drawer_safe_area.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class SpalshScreen extends ConsumerStatefulWidget {
   const SpalshScreen({super.key});

@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "27598093800",
-    "project_id": "voiceofgospel-16e68",
-    "storage_bucket": "voiceofgospel-16e68.appspot.com"
+    "project_id": "cityMedia-16e68",
+    "storage_bucket": "cityMedia-16e68.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:27598093800:android:21f597e3d224d24cf5f85d",
         "android_client_info": {
-          "package_name": "com.themd.voiceofgospel"
+          "package_name": "com.themd.cityMedia"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "27598093800-lgtun0prr75d3e5q7fo8u75upqjh1t0k.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.themd.voiceofgospel"
+                "bundle_id": "com.themd.cityMedia"
               }
             }
           ]

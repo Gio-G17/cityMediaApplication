@@ -13,11 +13,11 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.themd.voiceofgospel</string>
+	<string>com.themd.cityMedia</string>
 	<key>PROJECT_ID</key>
-	<string>voiceofgospel-16e68</string>
+	<string>cityMedia-16e68</string>
 	<key>STORAGE_BUCKET</key>
-	<string>voiceofgospel-16e68.appspot.com</string>
+	<string>cityMedia-16e68.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/utilities/function.dart';
+import 'package:cityMedia/utilities/function.dart';
 
 class StationModel{
   final String urlAudio;

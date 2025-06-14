@@ -7,11 +7,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:upgrader/upgrader.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/screens/splash/spalsh_screen.dart';
-import 'package:voiceofgospel/services/firebase_services.dart';
-import 'package:voiceofgospel/services/local_notification_service.dart';
-import 'package:voiceofgospel/services/network_connection/network_dependency_injection.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/screens/splash/spalsh_screen.dart';
+import 'package:cityMedia/services/firebase_services.dart';
+import 'package:cityMedia/services/local_notification_service.dart';
+import 'package:cityMedia/services/network_connection/network_dependency_injection.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'features/screens/home/home_screen.dart';
@@ -71,7 +71,7 @@ FlutterNativeSplash.remove();
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'voice of gospel',
+      title: 'cityMedia of gospel',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

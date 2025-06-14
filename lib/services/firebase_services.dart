@@ -1,5 +1,5 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:voiceofgospel/services/local_notification_service.dart';
+import 'package:cityMedia/services/local_notification_service.dart';
 
 class FirebaseServices {
 

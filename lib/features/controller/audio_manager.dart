@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:perfect_volume_control/perfect_volume_control.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
 
 final audioProvider =
     ChangeNotifierProvider<AudioManager>((ref) => AudioManager(ref));
@@ -33,8 +33,8 @@ class AudioManager extends ChangeNotifier {
           Uri.parse(ref.read(getStationProv).value!.urlAudio),
           tag: const MediaItem(
             id: '1',
-            album: "Voice of gospel",
-            title: "Voice of gospel",
+            album: "cityMedia of gospel",
+            title: "cityMedia of gospel",
           ),
         ),
         preload: true, // Preload to improve buffering

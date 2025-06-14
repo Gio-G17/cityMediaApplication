@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class SidebarFooter extends StatelessWidget {
   const SidebarFooter({super.key});

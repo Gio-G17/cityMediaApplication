@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:voiceofgospel/features/domain/social_model.dart';
-import 'package:voiceofgospel/theme/colors.dart';
-import 'package:voiceofgospel/utilities/function.dart';
+import 'package:cityMedia/features/domain/social_model.dart';
+import 'package:cityMedia/theme/colors.dart';
+import 'package:cityMedia/utilities/function.dart';
 
 class SocialWidgetButton extends StatelessWidget {
   const SocialWidgetButton({

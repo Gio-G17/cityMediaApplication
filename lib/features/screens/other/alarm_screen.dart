@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voiceofgospel/features/controller/audio_manager.dart';
-import 'package:voiceofgospel/features/screens/home/home_screen.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/controller/audio_manager.dart';
+import 'package:cityMedia/features/screens/home/home_screen.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class AlarmScreen extends ConsumerStatefulWidget {
   const AlarmScreen({super.key});

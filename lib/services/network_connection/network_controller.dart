@@ -1,7 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class NetworkController extends GetxController{
   final Connectivity _connectivity=Connectivity();

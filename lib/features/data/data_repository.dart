@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voiceofgospel/features/domain/contacts_model.dart';
-import 'package:voiceofgospel/features/domain/server_model.dart';
-import 'package:voiceofgospel/features/domain/share_model.dart';
-import 'package:voiceofgospel/features/domain/social_model.dart';
-import 'package:voiceofgospel/features/domain/station_model.dart';
+import 'package:cityMedia/features/domain/contacts_model.dart';
+import 'package:cityMedia/features/domain/server_model.dart';
+import 'package:cityMedia/features/domain/share_model.dart';
+import 'package:cityMedia/features/domain/social_model.dart';
+import 'package:cityMedia/features/domain/station_model.dart';
 
 class DataRepository {
   FirebaseFirestore firestore = FirebaseFirestore.instance;

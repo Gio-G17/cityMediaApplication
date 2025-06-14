@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import the flutter_svg package
-import 'package:voiceofgospel/features/controller/audio_manager.dart';
+import 'package:cityMedia/features/controller/audio_manager.dart';
 
 class HomePlayer extends ConsumerWidget {
   final double width;

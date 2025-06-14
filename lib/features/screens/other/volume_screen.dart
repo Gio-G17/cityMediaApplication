@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:perfect_volume_control/perfect_volume_control.dart';
-import 'package:voiceofgospel/theme/colors.dart';
-import 'package:voiceofgospel/features/controller/audio_manager.dart';
+import 'package:cityMedia/theme/colors.dart';
+import 'package:cityMedia/features/controller/audio_manager.dart';
 
 class VolumeScreen extends StatelessWidget {
   const VolumeScreen({

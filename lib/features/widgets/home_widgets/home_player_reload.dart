@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import the flutter_svg package
-import 'package:voiceofgospel/features/controller/audio_manager.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/controller/audio_manager.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class HomePlayerReload extends ConsumerWidget {
   const HomePlayerReload({super.key});

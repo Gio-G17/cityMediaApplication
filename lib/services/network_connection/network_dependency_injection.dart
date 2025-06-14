@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:voiceofgospel/services/network_connection/network_controller.dart';
+import 'package:cityMedia/services/network_connection/network_controller.dart';
 
 class NetworkDependencyInjection{
   static void init(){

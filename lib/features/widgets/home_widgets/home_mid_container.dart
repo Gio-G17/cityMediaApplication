@@ -2,13 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:voiceofgospel/features/controller/audio_manager.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/widgets/buttons/alarm_button.dart';
-import 'package:voiceofgospel/features/widgets/buttons/volume_button.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_player.dart';
-import 'package:voiceofgospel/features/widgets/wave_form/waveform_painter.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/controller/audio_manager.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/widgets/buttons/alarm_button.dart';
+import 'package:cityMedia/features/widgets/buttons/volume_button.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_player.dart';
+import 'package:cityMedia/features/widgets/wave_form/waveform_painter.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class HomeMidContainer extends ConsumerStatefulWidget {
   const HomeMidContainer({super.key});

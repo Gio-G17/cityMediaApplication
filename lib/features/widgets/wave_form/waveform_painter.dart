@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/features/widgets/wave_form/waveform_widget.dart';
+import 'package:cityMedia/features/widgets/wave_form/waveform_widget.dart';
 
 class MusicVisualizer extends StatelessWidget {
   final double width;

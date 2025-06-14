@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/widgets/sidebar_widgets/sidebar_footer.dart';
-import 'package:voiceofgospel/features/widgets/sidebar_widgets/sidebar_header.dart';
-import 'package:voiceofgospel/main.dart';
-import 'package:voiceofgospel/theme/colors.dart';
-import 'package:voiceofgospel/utilities/function.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_footer.dart';
+import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_header.dart';
+import 'package:cityMedia/main.dart';
+import 'package:cityMedia/theme/colors.dart';
+import 'package:cityMedia/utilities/function.dart';
 
 class AboutUsPage extends StatelessWidget {
   final VoidCallback onBack;

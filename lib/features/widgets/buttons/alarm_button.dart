@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/features/screens/other/alarm_screen.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/screens/other/alarm_screen.dart';
+import 'package:cityMedia/theme/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AlarmButton extends StatelessWidget {

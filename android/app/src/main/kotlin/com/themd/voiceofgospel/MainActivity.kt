@@ -1,4 +1,4 @@
-package com.themd.voiceofgospel
+package com.themd.cityMedia
 
 import io.flutter.embedding.android.FlutterActivity
 

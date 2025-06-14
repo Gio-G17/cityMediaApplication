@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/features/screens/drawer/drawer_page.dart';
+import 'package:cityMedia/features/screens/drawer/drawer_page.dart';
 
 class MyDrawerSafeArea extends StatelessWidget {
   const MyDrawerSafeArea({

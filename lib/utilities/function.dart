@@ -1,6 +1,6 @@
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/theme/colors.dart';
 customlaunchURL(String url) async {
   if (await canLaunchUrl(Uri.parse(url))) {
     await launchUrl(Uri.parse(url));

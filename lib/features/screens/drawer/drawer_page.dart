@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/screens/drawer/about_us_page.dart';
-import 'package:voiceofgospel/features/screens/drawer/contacts_page.dart';
-import 'package:voiceofgospel/features/screens/drawer/social_widget.dart'; // For launching URLs
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/screens/drawer/about_us_page.dart';
+import 'package:cityMedia/features/screens/drawer/contacts_page.dart';
+import 'package:cityMedia/features/screens/drawer/social_widget.dart'; // For launching URLs
 
 class DrawerPage extends ConsumerStatefulWidget {
   const DrawerPage({super.key});
@@ -250,7 +250,7 @@ Widget build(BuildContext context) {
 
   void _redirectToStore() {
     final storeUrl = Platform.isAndroid
-        ? "https://play.google.com/store/apps/details?id=com.themd.voiceofgospel"
+        ? "https://play.google.com/store/apps/details?id=com.themd.cityMedia"
         : "https://apps.apple.com/lb/app/%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9-%D8%B5%D9%88%D8%AA-%D8%A7%D9%84%D8%A5%D9%86%D8%AC%D9%8A%D9%84/id1578779392";
     launchUrl(Uri.parse(storeUrl));
   }

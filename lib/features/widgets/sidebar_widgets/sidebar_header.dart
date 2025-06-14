@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class SidebarHeader extends StatelessWidget {
   final VoidCallback onBack;

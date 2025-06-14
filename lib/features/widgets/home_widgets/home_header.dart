@@ -2,9 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voiceofgospel/features/data/data_repository.dart';
-import 'package:voiceofgospel/features/widgets/home_widgets/home_player_reload.dart';
-import 'package:voiceofgospel/theme/colors.dart';
+import 'package:cityMedia/features/data/data_repository.dart';
+import 'package:cityMedia/features/widgets/home_widgets/home_player_reload.dart';
+import 'package:cityMedia/theme/colors.dart';
 
 class HomeHeader extends ConsumerWidget implements PreferredSizeWidget {
   final double height;
