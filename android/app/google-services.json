@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189872298722",
+    "project_id": "citymedia-31483",
+    "storage_bucket": "citymedia-31483.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189872298722:android:f9f1e712d54b85a4755cbb",
+        "android_client_info": {
+          "package_name": "com.lit.cityMedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe_sxfEVOp5yNzPXzWw00u-o0-Nhp-EuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
