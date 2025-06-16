@@ -6,7 +6,7 @@ class AppColors {
   static const Color backgroundColor = Color(0xFFFFFFFF);
 
   // Define the primary color
-  static const Color primaryColor = Color(0xFF2276A5);
+  static const Color primaryColor = Color(0xFF286887);
 
   // Define the secondary color
   static const Color secondaryColor = Color(0xFF707070);
@@ -18,7 +18,7 @@ class AppColors {
   static const Color iconsColorinActive = Color(0xFFFFFFFF);
 
   // Define the primary text color
-  static const Color textPrimaryColor = Color(0xFF2276A5);
+  static const Color textPrimaryColor = Color(0xFF286887);
 
   // Define the secondary text color
   static const Color textSecondaryColor = Color(0xFF707070);

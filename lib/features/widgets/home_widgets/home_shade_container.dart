@@ -8,7 +8,7 @@ class HomeShadeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(36, 8, 2, 2),
+      color: Color.fromARGB(200 ,12, 51, 68),
     );
   }
 }

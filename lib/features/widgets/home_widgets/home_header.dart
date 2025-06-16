@@ -20,19 +20,19 @@ class HomeHeader extends ConsumerWidget implements PreferredSizeWidget {
       child: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: CachedNetworkImage(
-          height: 35,
-          imageUrl: stationLogoUrl,
-        ),
+        // title: CachedNetworkImage(
+        //   height: 35,
+        //   imageUrl: stationLogoUrl,
+        // ),
         // title: Image.asset(
         //   'assets/logo/smallLogo.png', // Replace with your logo's file path in the assets folder
         //   height: 50, // Adjust the height as needed
         //   fit: BoxFit.contain,
         // ),
-        // title: const Text(
-        //   'VOG',
-        //   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        // ),
+        title: const Text(
+          'City Media',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
         leading: Builder(
           builder: (context) => IconButton(
             onPressed: () {

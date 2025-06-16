@@ -110,21 +110,21 @@ class _HomeMidContainerState extends ConsumerState<HomeMidContainer> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    '94.5 FM',
-                    style:
-                        TextStyle(color: AppColors.textTertiaryColor, fontSize: 24),
-                  ),
-                  SvgPicture.asset('assets/homepage_icons/fmSliderIcon.svg',height: 30,),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.center,
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: [
+            //       const Text(
+            //         '94.5 FM',
+            //         style:
+            //             TextStyle(color: AppColors.textTertiaryColor, fontSize: 24),
+            //       ),
+            //       SvgPicture.asset('assets/homepage_icons/fmSliderIcon.svg',height: 30,),
+            //     ],
+            //   ),
+            // ),
             //  child: CachedNetworkImage(
             //     imageUrl: ref.read(getStationProv).value?.urlMidleLogo ?? '',
             //   ),
@@ -152,7 +152,7 @@ class _HomeMidContainerState extends ConsumerState<HomeMidContainer> {
             // ),
             // ),
             Container(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 100),
               width: devWidth * 0.6,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
           child: Transform.rotate(
             angle: -0.5, // Slight rotation in radians
             child: Opacity(
-              opacity: 0.5, // 50% opacity
+              opacity: 0.6, // 50% opacity
               child: SvgPicture.asset(
                 'assets/sidebar_icons/radioIcon.svg',
                 height: 300,
@@ -122,12 +122,12 @@ Widget build(BuildContext context) {
             onTap: () => setState(() => currentPageIndex = 2),
             isIconText: false,
           ),
-          _buildSidebarOption(
-            title: "94.5 FM",
-            isSelected: currentPageIndex == 2,
-            onTap: () => setState(() => currentPageIndex = 2),
-            isIconText: true,
-          ),
+          // _buildSidebarOption(
+          //   title: "94.5 FM",
+          //   isSelected: currentPageIndex == 2,
+          //   onTap: () => setState(() => currentPageIndex = 2),
+          //   isIconText: true,
+          // ),
           const Spacer(),
           _buildFooter(),
         ],
@@ -150,15 +150,15 @@ Widget build(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            isIconText? Padding(
-              padding: const EdgeInsets.fromLTRB(0,0,15,15),
-              child: SvgPicture.asset('assets/sidebar_icons/radioIcon.svg',height: 40,),
-            ):SizedBox.shrink(),
+            // isIconText? Padding(
+            //   padding: const EdgeInsets.fromLTRB(0,0,15,15),
+            //   child: SvgPicture.asset('assets/sidebar_icons/radioIcon.svg',height: 40,),
+            // ):SizedBox.shrink(),
             Text(
               title,
               style: TextStyle(
                 color: isSelected || isIconText
-                    ? const Color.fromARGB(255, 34, 118, 165)
+                    ? const Color.fromARGB(255, 40, 104, 135)
                     : const Color.fromARGB(255, 153, 153, 153),
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
@@ -169,7 +169,7 @@ Widget build(BuildContext context) {
                 padding: EdgeInsets.only(left: 15.0, top: 5),
                 child: CircleAvatar(
                   radius: 9,
-                  backgroundColor: Color.fromARGB(255, 34, 118, 165),
+                  backgroundColor: Color.fromARGB(255, 40, 104, 135),
                 ),
               ),
           ],
@@ -212,7 +212,7 @@ Widget build(BuildContext context) {
                       : Icons
                           .star_border, 
                   color: index < _getAppRating()
-                      ? const Color.fromARGB(255, 34, 118, 165) 
+                      ? const Color.fromARGB(255, 40, 104, 135) 
                       : const Color.fromARGB(255, 153, 153,
                           153), 
                   size: 24,
@@ -250,7 +250,7 @@ Widget build(BuildContext context) {
 
   void _redirectToStore() {
     final storeUrl = Platform.isAndroid
-        ? "https://play.google.com/store/apps/details?id=com.themd.cityMedia"
+        ? "https://play.google.com/store/apps/details?id=com.lit.cityMedia"
         : "https://apps.apple.com/lb/app/%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9-%D8%B5%D9%88%D8%AA-%D8%A7%D9%84%D8%A5%D9%86%D8%AC%D9%8A%D9%84/id1578779392";
     launchUrl(Uri.parse(storeUrl));
   }
