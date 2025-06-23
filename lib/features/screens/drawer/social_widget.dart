@@ -15,31 +15,42 @@ class SocialWidgetButton extends StatelessWidget {
 
   final SocialModel socialModel;
 
-  @override
-  Widget build(BuildContext context) {
-    // Determine the asset path based on the title
-    final String iconPath = _getIconPath(socialModel.title);
-
-    return Padding(
-      padding: const EdgeInsets.only(right: 10),
-      child: InkWell(
-        onTap: () {
-          socialModel.title == 'Share'
-              ? (Share.share(Platform.isAndroid
-                  ? socialModel.linkAndroid
-                  : socialModel.linkIos))
-              : (customlaunchURL(Platform.isAndroid
-                  ? socialModel.linkAndroid
-                  : socialModel.linkIos));
-        },
-        child: SvgPicture.asset(
-          iconPath,
-          height: 35,
-          color: AppColors.primaryColor,
-        ),
-      ),
-    );
+ @override
+Widget build(BuildContext context) {
+  // Return nothing for YouTube or Website
+  if (socialModel.title == 'YouTube' || socialModel.title == 'Website') {
+    return const SizedBox.shrink();
   }
+
+  // Determine the asset path based on the title
+  final String iconPath = _getIconPath(socialModel.title);
+
+  return Padding(
+    padding: const EdgeInsets.only(right: 10),
+    child: InkWell(
+      onTap: () {
+        if (socialModel.title == 'Share') {
+          Share.share(
+            Platform.isAndroid
+                ? socialModel.linkAndroid
+                : socialModel.linkIos,
+          );
+        } else {
+          customlaunchURL(
+            Platform.isAndroid
+                ? socialModel.linkAndroid
+                : socialModel.linkIos,
+          );
+        }
+      },
+      child: SvgPicture.asset(
+        iconPath,
+        height: 35,
+        color: AppColors.primaryColor,
+      ),
+    ),
+  );
+}
 
   // Helper function to get the icon path
   String _getIconPath(String title) {
