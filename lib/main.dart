@@ -40,7 +40,7 @@ void main() async {
   await FirebaseServices().init();
   await NotificationService().init();
   FirebaseMessaging.instance.subscribeToTopic("all");
-}
+} 
 
 class MyApp extends StatefulWidget {
 
