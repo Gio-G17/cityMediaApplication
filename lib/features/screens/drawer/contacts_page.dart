@@ -94,7 +94,7 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
     final message = Message()
       ..from = Address(emailText, 'Contact Form')
       ..recipients.add(
-          'giorgioghantous@gmail.com') // Replace with the recipient's email
+          'citymedia.devgrp@gmail.com') // Replace with the recipient's email
       ..subject = 'Contact Form Submission :: ${DateTime.now()}'
       ..text = 'Name: ${nameText}\n'
           'Email: ${emailText}\n'
