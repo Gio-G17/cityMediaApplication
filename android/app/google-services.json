@@ -12,7 +12,20 @@
           "package_name": "com.lit.cityMedia"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "189872298722-gbdiurpc7b4047u1r1u3vq6m6b9mjnqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lit.cityMedia",
+            "certificate_hash": "704ad2d689a07bb67ed7c121325b3c97dcf912a2"
+          }
+        },
+        {
+          "client_id": "189872298722-pfgo2e4ludi6bhuju5ef9nkc81u75die.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAe_sxfEVOp5yNzPXzWw00u-o0-Nhp-EuM"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189872298722-pfgo2e4ludi6bhuju5ef9nkc81u75die.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "189872298722-79o3ekpt9qpe653idep2plvf81f8j3c6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lit.CityMedia"
+              }
+            }
+          ]
         }
       }
     }

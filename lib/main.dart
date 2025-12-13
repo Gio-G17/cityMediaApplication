@@ -71,7 +71,7 @@ FlutterNativeSplash.remove();
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'cityMedia of gospel',
+      title: 'City Media',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:perfect_volume_control/perfect_volume_control.dart';
+import 'package:volume_controller/volume_controller.dart';
 import 'package:cityMedia/features/data/data_repository.dart';
 
 final audioProvider =
@@ -24,7 +24,7 @@ class AudioManager extends ChangeNotifier {
   bool isTimerActive = false;
 
   void initAudio() async {
-    currentVolume = await PerfectVolumeControl.getVolume();
+    currentVolume = await VolumeController().getVolume();
     currentValue = currentVolume;
 
     try {
@@ -33,8 +33,8 @@ class AudioManager extends ChangeNotifier {
           Uri.parse(ref.read(getStationProv).value!.urlAudio),
           tag: const MediaItem(
             id: '1',
-            album: "cityMedia of gospel",
-            title: "cityMedia of gospel",
+            album: "cityMedia",
+            title: "cityMedia",
           ),
         ),
         preload: true, // Preload to improve buffering
