@@ -18,8 +18,6 @@ import 'features/screens/home/home_screen.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // // If you're going to use other Firebase services in the background, such as Firestore,
-  // // make sure you call `initializeApp` before using other Firebase services.
 }
 late PackageInfo packageInfo;
 void main() async {
@@ -77,7 +75,6 @@ FlutterNativeSplash.remove();
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
-      // home: const MyHomePage(title: 'VOG'),
       home: UpgradeAlert(
           showLater: false,
           showIgnore: false,
@@ -100,6 +97,3 @@ FlutterNativeSplash.remove();
     );
   }
 }
-
- 
-/* https://docs.flutter.dev/deployment/android#enabling-multidex-support */

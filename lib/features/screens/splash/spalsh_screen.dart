@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cityMedia/features/data/data_repository.dart';
 import 'package:cityMedia/features/screens/home/home_screen.dart';
@@ -35,12 +34,6 @@ class _SpalshScreenState extends ConsumerState<SpalshScreen> {
         _isDataLoaded = true;
       });
     }
-
-    // if (mounted) {
-    //   Navigator.of(context).pushAndRemoveUntil(
-    //       MaterialPageRoute(builder: (_) => const HomeScreen()),
-    //       (route) => false);
-    // }
   }
 
   @override
@@ -162,23 +155,13 @@ class _SpalshScreenState extends ConsumerState<SpalshScreen> {
                   //     textAlign: TextAlign.center,
                   //   );
                   // }),
-                ],
-              ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    ) // Or the main content of the screen
+          ),
+    )
       : Center(child: CircularProgressIndicator());
-    // return Scaffold(
-    //   body: SizedBox(
-    //     width: MediaQuery.of(context).size.width,
-    //     height: MediaQuery.of(context).size.height,
-    //     child: Image.asset(
-    //       'assets/background_image/splash.png',
-    //       fit: BoxFit.cover,
-    //     ),
-    //   ),
-    // );
   }
 }

@@ -30,25 +30,6 @@ class _AlarmPageState extends ConsumerState<AlarmScreen> {
   void startTimer(int _start) {
     const oneSec = Duration(seconds: 1);
     ref.read(audioProvider).startTimer(_start * 60);
-    // _timer = Timer.periodic(oneSec, (Timer timer) {
-    //   if (mounted) {
-    //     setState(() {
-    //       currentValue = _start--;
-    //       print(_start);
-    //       if (_start < 0) {
-    //         _timer?.cancel();
-    //         isTimerActive = !isTimerActive;
-    //       }
-    //     });
-    //   } else {
-    //     currentValue = _start--;
-    //     print(_start);
-    //     if (_start < 0) {
-    //       _timer?.cancel();
-    //       isTimerActive = !isTimerActive;
-    //     }
-    //   }
-    // });
   }
 
   @override
@@ -151,11 +132,8 @@ class _AlarmPageState extends ConsumerState<AlarmScreen> {
                             ? {audioManager.cancelTimer(), cancel()}
                             : {
                                 startTimer(currentValue),
-                                // await Future.delayed(Duration(milliseconds: 500)),
                                 cancel()
                               };
-
-                        // isTimerActive = !isTimerActive;
                       },
                       child: Text(
                         audioManager.isTimerActive ? "Stop" : "Set",

@@ -1,5 +1,4 @@
 import 'dart:async';
-// import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -52,11 +51,9 @@ class AudioManager extends ChangeNotifier {
     isAnimating = true;
     notifyListeners();
     await player.play();
-    // startTimer();
   }
 
   void refresh() async {
-   // isPlaying = true;
     isAnimating = true;
     notifyListeners();
     await player.stop();
@@ -64,9 +61,7 @@ class AudioManager extends ChangeNotifier {
   }
 
   void reLoad() async {
-    // await player.stop();|
     isAnimating = true;
-  //  isPlaying = true;
     notifyListeners();
     await player.load();
     await player.play();
@@ -77,7 +72,6 @@ class AudioManager extends ChangeNotifier {
     isAnimating = false;
     notifyListeners();
     await player.pause();
-    // cancelTimer();
   }
 
   void startTimer(int duration) {
@@ -86,7 +80,6 @@ class AudioManager extends ChangeNotifier {
       stopAudio();
     });
     isTimerActive = true;
-    // notifyListeners();
   }
 
   void cancelTimer() {
@@ -94,7 +87,6 @@ class AudioManager extends ChangeNotifier {
       timer!.cancel();
       timer = null;
       isTimerActive = false; // Set timer state to inactive
-      // notifyListeners();
     }
   }
 
