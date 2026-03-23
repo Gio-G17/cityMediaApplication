@@ -77,40 +77,62 @@ class AboutUsPage extends StatelessWidget {
                     builder: (context, ref, _) {
                       return Padding(
                         padding: const EdgeInsets.only(bottom: 15.0),
-                        child: GestureDetector(
-                          child: Text.rich(
-                            TextSpan(
-                              text: 'Privacy Policy', // Main text
-                              style: const TextStyle(
-                                fontWeight: FontWeight
-                                    .bold, // Bold style for Privacy Policy
-                                fontSize: 16,
-                                color: AppColors.textSecondaryColor,
-                              ),
-                              children: [
+                        child: Column(
+                          children: [
+                            GestureDetector(
+                              child: Text.rich(
                                 TextSpan(
-                                  text:
-                                      ' App version  ${packageInfo.version}', // Subscript text
+                                  text: 'Privacy Policy', // Main text
                                   style: const TextStyle(
-                                    fontWeight:
-                                        FontWeight.normal, // Normal weight
-                                    fontSize: 8,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: AppColors.textSecondaryColor,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text:
+                                          ' App version  ${packageInfo.version}', // Subscript text
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 8,
+                                        color: AppColors.textSecondaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              onTap: () async {
+                                final privacyPolicyLink = ref
+                                    .read(getStationProv)
+                                    .value
+                                    ?.linkPrivacyPolicy;
+                                if (privacyPolicyLink != null) {
+                                  customlaunchURL(privacyPolicyLink);
+                                } else {
+                                  debugPrint(
+                                      'Privacy policy link is not available.');
+                                }
+                              },
+                            ),
+                            const SizedBox(height: 12),
+                            GestureDetector(
+                              child: const Text.rich(
+                                TextSpan(
+                                  text: 'Content Ownership & Rights',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
                                     color: AppColors.textSecondaryColor,
                                   ),
                                 ),
-                              ],
+                              ),
+                              onTap: () {
+                                const contentRightsLink =
+                                    'https://sites.google.com/view/city-media-content-ownership-r/home';
+                                customlaunchURL(contentRightsLink);
+                              },
                             ),
-                          ),
-                          onTap: () async {
-                            final privacyPolicyLink =
-                                ref.read(getStationProv).value?.linkPrivacyPolicy;
-                            if (privacyPolicyLink != null) {
-                              customlaunchURL(privacyPolicyLink);
-                            } else {
-                              // Handle null URL case if needed
-                              debugPrint('Privacy policy link is not available.');
-                            }
-                          },
+                          ],
                         ),
                       );
                     },

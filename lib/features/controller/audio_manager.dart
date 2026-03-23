@@ -33,8 +33,8 @@ class AudioManager extends ChangeNotifier {
           Uri.parse(ref.read(getStationProv).value!.urlAudio),
           tag: const MediaItem(
             id: '1',
-            album: "cityMedia of gospel",
-            title: "cityMedia of gospel",
+            album: "City Media Online",
+            title: "City Media Online",
           ),
         ),
         preload: true, // Preload to improve buffering
