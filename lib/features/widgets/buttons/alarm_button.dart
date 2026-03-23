@@ -32,14 +32,6 @@ class AlarmButton extends StatelessWidget {
             content: AlarmScreen(),
           ),
         );
-        // showDialog(
-        //   context: context,
-        //   builder: (context) => const AlertDialog(
-        //     elevation: 0,
-        //     shape: LinearBorder(),
-        //     content: AlarmScreen(),
-        //   ),
-        // );
       },
     );
   }

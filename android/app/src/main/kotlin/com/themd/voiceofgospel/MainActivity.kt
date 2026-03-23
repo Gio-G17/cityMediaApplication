@@ -1,4 +1,4 @@
-package com.lit.cityMedia 
+package com.lit.cityMedia
 
 import io.flutter.embedding.android.FlutterActivity
 

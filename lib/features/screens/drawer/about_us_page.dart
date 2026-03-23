@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:cityMedia/features/data/data_repository.dart';
 import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_footer.dart';
 import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_header.dart';
@@ -45,7 +44,6 @@ class AboutUsPage extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     );
                   }),
-
                   Consumer(builder: (context, ref, _) {
                     return Text(
                       ref.read(getStationProv).value!.about,
@@ -58,21 +56,6 @@ class AboutUsPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     );
                   }),
-                  // const Text(
-                  //   "\nWELCOME TO VOG\n\nYOUR GATEWAY TO ARAB CULTURE IN QATAR"
-                  //   "Welcome to Habaieb FM, Qatar's inaugural radio station! Broadcasting from (address, Doha, Qatar), "
-                  //   "we’re your go-to destination for diverse music and entertainment."
-                  //   "Join us in redefining radio with a mix of tradition and innovation. "
-                  //   "Tune in and be part of history at Habaieb FM!\n",
-                  //   style: TextStyle(
-                  //     fontSize: 14,
-                  //     fontWeight: FontWeight.normal,
-                  //     color: Color.fromARGB(255, 153, 153, 153),
-                  //     height: 3,
-                  //   ),
-                  //   textAlign: TextAlign.center,
-                  // ),
-
                   Consumer(
                     builder: (context, ref, _) {
                       return Padding(
@@ -82,7 +65,7 @@ class AboutUsPage extends StatelessWidget {
                             GestureDetector(
                               child: Text.rich(
                                 TextSpan(
-                                  text: 'Privacy Policy', // Main text
+                                  text: 'Privacy Policy',
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -90,8 +73,7 @@ class AboutUsPage extends StatelessWidget {
                                   ),
                                   children: [
                                     TextSpan(
-                                      text:
-                                          ' App version  ${packageInfo.version}', // Subscript text
+                                      text: ' App version  ${packageInfo.version}',
                                       style: const TextStyle(
                                         fontWeight: FontWeight.normal,
                                         fontSize: 8,
@@ -102,15 +84,12 @@ class AboutUsPage extends StatelessWidget {
                                 ),
                               ),
                               onTap: () async {
-                                final privacyPolicyLink = ref
-                                    .read(getStationProv)
-                                    .value
-                                    ?.linkPrivacyPolicy;
+                                final privacyPolicyLink =
+                                    ref.read(getStationProv).value?.linkPrivacyPolicy;
                                 if (privacyPolicyLink != null) {
                                   customlaunchURL(privacyPolicyLink);
                                 } else {
-                                  debugPrint(
-                                      'Privacy policy link is not available.');
+                                  debugPrint('Privacy policy link is not available.');
                                 }
                               },
                             ),
@@ -137,14 +116,6 @@ class AboutUsPage extends StatelessWidget {
                       );
                     },
                   ),
-
-                  // final url =
-                  //     Uri.parse('https://lit-online.com');
-                  // if (await canLaunchUrl(url)) {
-                  //   launchUrl(url);
-                  // } else {
-                  //   // Handle error, e.g., show a dialog
-                  // }
                 ],
               ),
             ),

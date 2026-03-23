@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cityMedia/features/data/data_repository.dart';
-// import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_footer.dart';
 import 'package:cityMedia/features/widgets/sidebar_widgets/sidebar_header.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -24,46 +23,31 @@ class _ContactPageState extends ConsumerState<ContactPage> {
   final phoneController = TextEditingController();
   final noteController = TextEditingController();
 
-  // v2Server = ref.read(getServerProv).value!.,
-
-  getServerData() async {
-    print('I am in ASYNNNCCCCCCCC');
-    await Future.wait([
-      ref.read(getServerProv.future),
-    ]);
-    if (mounted) {
-      setState(() {
-        print('I am in set stateeeeeeeeeeeeeeeee');
-      });
-    }
-  }
-
-  // @override
-  // void initState() {
-  //   getServerData();
-
-  //   print('I am in set REAAADDDDYYYYYYYY');
-
-  //   super.initState();
-  // }
-
   late final KeyboardVisibilityController _keyboardVisibilityController;
   bool _isKeyboardVisible = false;
 
   @override
   void initState() {
     super.initState();
-    getServerData();
+    _prefetchServerData();
 
     _keyboardVisibilityController = KeyboardVisibilityController();
     _isKeyboardVisible = _keyboardVisibilityController.isVisible;
 
-    // Listen to keyboard visibility changes
     _keyboardVisibilityController.onChange.listen((bool isVisible) {
       setState(() {
         _isKeyboardVisible = isVisible;
       });
     });
+  }
+
+  Future<void> _prefetchServerData() async {
+    await Future.wait([
+      ref.read(getServerProv.future),
+    ]);
+    if (mounted) {
+      setState(() {});
+    }
   }
 
   @override
@@ -75,38 +59,25 @@ class _ContactPageState extends ConsumerState<ContactPage> {
     super.dispose();
   }
 
-  void _onFocusChange() {
-    setState(() {});
-  }
-
   void sendEmail({
     required String nameText,
     required String emailText,
     required String phoneText,
     required String noteText,
   }) async {
-    final smtpServer = gmail('${ref.read(getServerProv).value?.smtpEmail}',
-        '${ref.read(getServerProv).value?.smtpPass}'); // Replace with your email and app password
-
-print('EEEMAAAILLLL: ${ref.read(getServerProv).value?.smtpEmail}');
-print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
+    final smtpServer = gmail(
+      ref.read(getServerProv).value?.smtpEmail ?? '',
+      ref.read(getServerProv).value?.smtpPass ?? '',
+    );
 
     final message = Message()
       ..from = Address(emailText, 'Contact Form')
-      ..recipients.add(
-          'citymedia.devgrp@gmail.com') // Replace with the recipient's email
+      ..recipients.add('citymedia.devgrp@gmail.com')
       ..subject = 'Contact Form Submission :: ${DateTime.now()}'
-      ..text = 'Name: ${nameText}\n'
-          'Email: ${emailText}\n'
-          'Phone Number: ${phoneText}\n'
-          'Note: ${noteText}';
+      ..text = 'Name: $nameText\nEmail: $emailText\nPhone Number: $phoneText\nNote: $noteText';
 
     try {
-      final sendReport = await send(message, smtpServer);
-      print('worked');
-      // ScaffoldMessenger.of(context).showSnackBar(
-      //   SnackBar(content: Text('Message sent: ${sendReport.toString()}')),
-      // );
+      await send(message, smtpServer);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -117,9 +88,8 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
     }
   }
 
-  // @override
+  @override
   Widget build(BuildContext context) {
-// print(_isKeyboardOpen);
     return Container(
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -147,7 +117,6 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
-                    flex: 1,
                     child: _buildTextField(
                       controller: nameController,
                       hintText: 'Name',
@@ -155,7 +124,6 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                     ),
                   ),
                   Expanded(
-                    flex: 1,
                     child: _buildTextField(
                       controller: emailController,
                       hintText: 'Email',
@@ -163,7 +131,6 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                     ),
                   ),
                   Expanded(
-                    flex: 1,
                     child: _buildTextField(
                       controller: phoneController,
                       hintText: 'Phone Number',
@@ -184,12 +151,13 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                     child: ElevatedButton(
                       onPressed: () {
                         sendEmail(
-                            nameText: nameController.text.toString(),
-                            emailText: emailController.text.toString(),
-                            phoneText: phoneController.text.toString(),
-                            noteText: noteController.text.toString());
+                          nameText: nameController.text.toString(),
+                          emailText: emailController.text.toString(),
+                          phoneText: phoneController.text.toString(),
+                          noteText: noteController.text.toString(),
+                        );
 
-                        Navigator.of(context).pop(); // Closes the drawer
+                        Navigator.of(context).pop();
 
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
@@ -198,15 +166,10 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                           ),
                         );
 
-                        // Clear the input fields
                         nameController.clear();
                         emailController.clear();
                         phoneController.clear();
                         noteController.clear();
-
-                        // Show confirmation message
-
-                        // Navigate back to the home page
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primaryColor,
@@ -218,9 +181,10 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
                       child: const Text(
                         'Send',
                         style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.textTertiaryColor),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.textTertiaryColor,
+                        ),
                       ),
                     ),
                   ),
@@ -228,41 +192,7 @@ print('PASSSSSSSSS:  ${ref.read(getServerProv).value?.smtpPass}');
               ),
             ),
           ),
-          // _isKeyboardVisible
-          //     ? SizedBox.shrink()
-          //     : Padding(
-          //         padding: EdgeInsets.all(15.0),
-          //         child: Row(
-          //           mainAxisSize: MainAxisSize.max,
-          //           crossAxisAlignment: CrossAxisAlignment.center,
-          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //           children: [
-          //             Consumer(builder: (context, ref, _) {
-          //               final phoneNb =
-          //                   ref.watch(getContactsProv).value?.phoneNb ?? 'N/A';
-          //               return Text(
-          //                 phoneNb,
-          //                 style: const TextStyle(
-          //                     color: AppColors.textSecondaryColor,
-          //                     fontSize: 15,
-          //                     fontWeight: FontWeight.normal),
-          //               );
-          //             }),
-          //             Consumer(builder: (context, ref, _) {
-          //               final email =
-          //                   ref.watch(getContactsProv).value?.email ?? 'N/A';
-          //               return Text(
-          //                 email,
-          //                 style: const TextStyle(
-          //                     color: AppColors.textSecondaryColor,
-          //                     fontSize: 15,
-          //                     fontWeight: FontWeight.normal),
-          //               );
-          //             }),
-          //           ],
-          //         ),
-          //       ),
-          _isKeyboardVisible ? SizedBox.shrink() : const SidebarFooter(),
+          _isKeyboardVisible ? const SizedBox.shrink() : const SidebarFooter(),
         ],
       ),
     );

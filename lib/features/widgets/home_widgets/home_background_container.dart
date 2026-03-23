@@ -16,7 +16,6 @@ class HomeBackgroundContainer extends ConsumerWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/background_image/image5.png'),
-          // image: CachedNetworkImageProvider(ref.read(getStationProv).value!.urlHomeBackGround),
           fit: BoxFit.cover,
         ),
       ),

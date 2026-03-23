@@ -12,26 +12,6 @@ class VolumeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double devHeight = MediaQuery.of(context).size.height;
 
-    openDialog() => showModalBottomSheet(
-          context: context,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          builder: ((context) {
-            return const SizedBox(
-                height: 200,
-                width: 400,
-                child: Wrap(children: [VolumeScreen()]));
-          }),
-        );
-
-    openDialog2() => showDialog(
-          context: context,
-          barrierDismissible: true,
-          builder: (context) => const AlertDialog(
-            shape: LinearBorder(),
-            content: VolumeScreen(),
-          ),
-        );
     return IconButton(
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
@@ -52,7 +32,6 @@ class VolumeButton extends StatelessWidget {
             content: VolumeScreen(),
           ),
         );
-        // openDialog2();
       },
     );
   }

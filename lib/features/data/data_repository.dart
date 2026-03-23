@@ -10,15 +10,12 @@ class DataRepository {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   Future<List<SocialModel>> getSocial() async {
     try {
-      // List<SocialModel> list=[];
-      // QuerySnapshot querySnapshot = await firestore.collection("v2-Social").orderBy("iconOrder", descending: false).get();
       QuerySnapshot querySnapshot = await firestore
           .collection("v2-Social")
           .orderBy("iconOrder",
               descending: false) // Order by iconOrder in ascending order
           .get();
 
-      // Map the documents to a list of SocialModel
       List<SocialModel> list = querySnapshot.docs.map((doc) {
         return SocialModel.fromMap(doc.data() as Map<String, dynamic>);
       }).toList();
@@ -28,23 +25,6 @@ class DataRepository {
       print('XXXXXXXXXXXXXXSError fetching social data: $e');
       return [];
     }
-
-  // List<SocialModel> lisst = querySnapshot.docs
-  //     .map((e) => SocialModel.fromMap(e.data() as Map<String, dynamic>))
-  //     .toList();
-
-  //       lisst.sort((a, b) => a.iconOrder.compareTo(b.iconOrder));
-  //   // for(var doc in querySnapshot.docs){
-  //   //   print(doc.data());
-  //   //   // print("link is ${doc['link']}");
-  //   //  SocialModel socialModel= SocialModel.fromMap(doc.data() as Map<String,dynamic>);
-  //   //  list.add(socialModel);
-  //   // }
-  //   // List<SocialModel> lisst = List.from((querySnapshot.docs)
-  //   //     .map((e) => SocialModel.fromMap(e.data() as Map<String, dynamic>)));
-  //   print("LISSSSSTTT QQQUAAANNNTIITTYY"+lisst.length.toString());
-
-  // return lisst;
   }
 
 
