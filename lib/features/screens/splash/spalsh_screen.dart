@@ -83,10 +83,7 @@ class _SpalshScreenState extends ConsumerState<SpalshScreen> {
                     style: TextStyle(color: AppColors.textPrimaryColor),
                   ),
                   onPressed: () {
-                    // Navigator.pop(context);
                     Navigator.of(context).pop(false);
-                    // moveToBackground();
-                    // sleep(Duration(days: 1));
                   },
                 ),
                 TextButton(
@@ -140,21 +137,6 @@ class _SpalshScreenState extends ConsumerState<SpalshScreen> {
                 children: [
                   Expanded(flex: 2, child: HomeHeader(height: devHeight)),
                   const Expanded(flex: 9, child: HomeMidContainer()),
-                  // const Expanded(
-                  //   flex: 1,
-                  //   child: SizedBox(),
-                  // )
-                  // Consumer(builder: (context, ref, _) {
-                  //   return Text(
-                  //     ref.read(getStationProv).value!.slug,
-                  //     style: const TextStyle(
-                  //       fontWeight: FontWeight.w300,
-                  //       fontSize: 15,
-                  //       color: AppColors.textSecondaryColor,
-                  //     ),
-                  //     textAlign: TextAlign.center,
-                  //   );
-                  // }),
                     ],
                   ),
                 ),

@@ -83,10 +83,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     style: TextStyle(color: AppColors.textPrimaryColor),
                   ),
                   onPressed: () {
-                    // Navigator.pop(context);
                     Navigator.of(context).pop(false);
-                    // moveToBackground();
-                    // sleep(Duration(days: 1));
                   },
                 ),
                 TextButton(

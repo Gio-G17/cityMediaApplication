@@ -11,24 +11,19 @@ customlaunchURL(String url) async {
 
 
 Color hexToColor(String hexString, {Color defaultColor =  AppColors.textPrimaryColor}) {
-  // Trim whitespace and convert to uppercase
   hexString = hexString.trim().toUpperCase().replaceAll("#", "");
 
-  // Check if the string is of a valid length and only contains hexadecimal characters
   if (hexString.length != 6 && hexString.length != 8 || !RegExp(r'^[0-9A-F]+$').hasMatch(hexString)) {
-    return defaultColor; // Return default color if input is invalid
+    return defaultColor;
   }
 
-  // Ensure full opacity if no alpha value is provided
   if (hexString.length == 6) {
     hexString = "FF" + hexString;
   }
 
   try {
-    // Try parsing the hex string into a Color
     return Color(int.parse("0x$hexString"));
   } catch (e) {
-    // If an error occurs during parsing, return the default color
     return defaultColor;
   }
 }

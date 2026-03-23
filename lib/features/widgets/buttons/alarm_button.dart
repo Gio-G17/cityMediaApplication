@@ -18,8 +18,8 @@ class AlarmButton extends StatelessWidget {
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,
       icon: SvgPicture.asset(
-        'assets/homepage_icons/timerIcon.svg', // Path to your SVG file
-        color: AppColors.iconsColorActive, // Optional: Apply a color
+        'assets/homepage_icons/timerIcon.svg',
+        color: AppColors.iconsColorActive,
         height: devHeight * 0.035,
       ),
       onPressed: () {

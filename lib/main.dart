@@ -63,8 +63,6 @@ FlutterNativeSplash.remove();
 
   }
 
-  // const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -82,18 +80,7 @@ FlutterNativeSplash.remove();
             durationUntilAlertAgain: Duration.zero,
           ),
           barrierDismissible: false,
-          // child: const HomeScreen()),
       child: const SpalshScreen(),),
-      // home: Scaffold(body: Center(child: Consumer(
-      //   builder: (context,ref,_) {
-      //     return ElevatedButton(onPressed: () async{
-      //     //  await ref.read(getSocialProv.future);
-      //      await ref.read(getShareProv.future);
-      //     },
-      //     child: Text("GetData"),
-      //     );
-      //   }
-      // ),),),
     );
   }
 }

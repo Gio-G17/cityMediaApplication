@@ -16,7 +16,7 @@ class DrawerPage extends ConsumerStatefulWidget {
 }
 
 class _DrawerPageState extends ConsumerState<DrawerPage> {
-  int currentPageIndex = 0; // 0: Home Page, 1: About Us, 2: Contact
+  int currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {

@@ -36,12 +36,11 @@ class AudioManager extends ChangeNotifier {
             title: "City Media Online",
           ),
         ),
-        preload: true, // Preload to improve buffering
-        initialPosition: Duration.zero, // Start at the beginning
+        preload: true,
+        initialPosition: Duration.zero,
       );
       notifyListeners();
     } catch (e) {
-      // Handle the error, show a dialog or message
       print("Error loading audio source: $e");
     }
   }
@@ -86,7 +85,7 @@ class AudioManager extends ChangeNotifier {
     if (timer != null) {
       timer!.cancel();
       timer = null;
-      isTimerActive = false; // Set timer state to inactive
+      isTimerActive = false;
     }
   }
 

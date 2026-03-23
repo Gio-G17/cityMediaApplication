@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart'; // Import the flutter_svg package
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cityMedia/features/controller/audio_manager.dart';
 import 'package:cityMedia/theme/colors.dart';
 
@@ -21,9 +21,9 @@ class HomePlayerReload extends ConsumerWidget {
         child: IconButton(
           padding: EdgeInsets.zero,
           icon: SvgPicture.asset(
-            'assets/homepage_icons/reloadIcon.svg', // Your reload SVG path
-            color: AppColors.iconsColorActive, // Optionally color the SVG if needed
-            height: 25 // Adjust height as needed
+            'assets/homepage_icons/reloadIcon.svg',
+            color: AppColors.iconsColorActive,
+            height: 25
           ),
           onPressed: () {
             audioManager.reLoad();

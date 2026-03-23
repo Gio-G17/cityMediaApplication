@@ -26,12 +26,12 @@ class MusicVisualizer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-         width: 0.10*width, // Total width of the visualizer
-      height: 25, // Total height of the visualizer
+         width: 0.10*width,
+      height: 25,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List<Widget>.generate(
-          5, // Adjusted to 5 bars
+          5,
           (index) => VisualComponent(
             duration: durations[index % 5],
             color: colors[index % 4],

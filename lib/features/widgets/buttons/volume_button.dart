@@ -19,8 +19,8 @@ class VolumeButton extends StatelessWidget {
       focusColor: Colors.transparent,
       padding: EdgeInsets.zero,
       icon: SvgPicture.asset(
-        'assets/homepage_icons/volumeIcon.svg', // Path to your SVG file
-        color: AppColors.iconsColorActive, // Optional: Apply a color
+        'assets/homepage_icons/volumeIcon.svg',
+        color: AppColors.iconsColorActive,
         height: devHeight * 0.03,
       ),
       onPressed: () {

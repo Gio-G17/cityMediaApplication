@@ -32,7 +32,7 @@ class _VisualComponentState extends State<VisualComponent>
       curve: Curves.easeInOutCubic,
     );
 
-    animation = Tween<double>(begin: 12.5, end: 2.5).animate(curvedAnimation) // Only top half changes size
+    animation = Tween<double>(begin: 12.5, end: 2.5).animate(curvedAnimation)
       ..addListener(() {
         setState(() {});
       });
@@ -49,15 +49,15 @@ class _VisualComponentState extends State<VisualComponent>
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 5, // Fixed width for the bar
-      height: 25, // Fixed height of 25 for the entire bar
+      width: 5,
+      height: 25,
       child: Align(
-        alignment: Alignment.bottomCenter, // Aligning the changing part at the top
+        alignment: Alignment.bottomCenter,
         child: Container(
-          height: animation.value, // Only top half changes
+          height: animation.value,
           decoration: BoxDecoration(
             color: widget.color,
-            borderRadius: BorderRadius.zero, // Rectangular shape, no rounded corners
+            borderRadius: BorderRadius.zero,
           ),
         ),
       ),

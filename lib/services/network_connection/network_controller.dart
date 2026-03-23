@@ -30,7 +30,6 @@ snackStyle: SnackStyle.GROUNDED
       }
     }
   }
-    /// you have always to check if there is internet when you open the app because the stream will not handle it
   void firstCheck()async{
     List<ConnectivityResult> conx = await Connectivity().checkConnectivity();
     _updateConnectionStatus(conx);

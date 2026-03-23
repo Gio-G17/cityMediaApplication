@@ -13,7 +13,7 @@ class DataRepository {
       QuerySnapshot querySnapshot = await firestore
           .collection("v2-Social")
           .orderBy("iconOrder",
-              descending: false) // Order by iconOrder in ascending order
+              descending: false)
           .get();
 
       List<SocialModel> list = querySnapshot.docs.map((doc) {

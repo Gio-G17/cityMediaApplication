@@ -23,7 +23,6 @@ class _HomeMidContainerState extends ConsumerState<HomeMidContainer> {
     final devHeight = MediaQuery.of(context).size.height;
     final devWidth = MediaQuery.of(context).size.width;
 
-    // Access audioManager using ref.watch
     final audioManager = ref.watch(audioProvider);
 
     return Padding(

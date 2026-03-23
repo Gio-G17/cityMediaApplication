@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart'; // Import the flutter_svg package
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cityMedia/features/controller/audio_manager.dart';
 
 class HomePlayer extends ConsumerWidget {
@@ -26,8 +26,8 @@ class HomePlayer extends ConsumerWidget {
             padding: EdgeInsets.zero,
             icon: SvgPicture.asset(
               audioManager.isPlaying
-                  ? 'assets/homepage_icons/pauseIcon.svg' // Your pause SVG path
-                  : 'assets/homepage_icons/playIcon.svg', // Your play SVG pat     // Optionally color the SVG if needed
+                  ? 'assets/homepage_icons/pauseIcon.svg'
+                  : 'assets/homepage_icons/playIcon.svg',
             ),
             onPressed: () {
               print('test by themd');

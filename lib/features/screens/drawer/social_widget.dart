@@ -17,12 +17,10 @@ class SocialWidgetButton extends StatelessWidget {
 
  @override
 Widget build(BuildContext context) {
-  // Return nothing for YouTube or Website
   if (socialModel.title == 'YouTube' || socialModel.title == 'Website') {
     return const SizedBox.shrink();
   }
 
-  // Determine the asset path based on the title
   final String iconPath = _getIconPath(socialModel.title);
 
   return Padding(
@@ -52,7 +50,6 @@ Widget build(BuildContext context) {
   );
 }
 
-  // Helper function to get the icon path
   String _getIconPath(String title) {
     switch (title.toLowerCase()) {
       case 'facebook':
@@ -68,7 +65,7 @@ Widget build(BuildContext context) {
       case 'share':
         return 'assets/sidebar_icons/sahreIcon.svg';
       default:
-        return 'assets/sidebar_icons/radioIcon.svg'; // Fallback icon
+        return 'assets/sidebar_icons/radioIcon.svg';
     }
   }
 }

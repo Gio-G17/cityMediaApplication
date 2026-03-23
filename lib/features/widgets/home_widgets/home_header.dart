@@ -30,9 +30,9 @@ class HomeHeader extends ConsumerWidget implements PreferredSizeWidget {
               Scaffold.of(context).openDrawer();
             },
             icon: SvgPicture.asset(
-              'assets/homepage_icons/sidebarIcon.svg', // Replace with your SVG file path
-              color: AppColors.iconsColorActive, // Optional: apply color to the SVG
-              height: 20, // Adjust height as needed
+              'assets/homepage_icons/sidebarIcon.svg',
+              color: AppColors.iconsColorActive,
+              height: 20,
             ),
           ),
         ),

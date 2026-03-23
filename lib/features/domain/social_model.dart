@@ -37,5 +37,4 @@ Map<String, Color> colorMap = {
   'red': Colors.red,
   'blue': Colors.blue,
   'green': Colors.green,
-  // Add more colors as needed
 };
